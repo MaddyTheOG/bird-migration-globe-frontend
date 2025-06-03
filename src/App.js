@@ -21,7 +21,7 @@ function App() {
 
     Promise.all(
       regions.map((region) =>
-        axios.get(`http://127.0.0.1:5000/birds/${region}`).then((res) => res.data)
+        axios.get(`https://bird-migration-globe-backend.onrender.com/birds/${region}`).then((res) => res.data)
       )
     ).then((results) => {
       results.forEach((birds) => {
